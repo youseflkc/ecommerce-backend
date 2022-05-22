@@ -1,0 +1,44 @@
+Watching for file changes with StatReloader
+/home/yousef/Documents/Django Workspace/storefront/storefront/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/yousef/Documents/Django Workspace/storefront/storefront/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/yousef/Documents/Django Workspace/storefront/storefront/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/yousef/Documents/Django Workspace/storefront/storefront/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Calling httpbin
+Recieved the response
+/home/yousef/Documents/Django Workspace/storefront/storefront/settings.py changed, reloading.
+2022-05-21 22:14:51,502 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-05-21 22:14:54,868 (INFO) - playground.views - Calling httpbin
+2022-05-21 22:14:57,127 (INFO) - playground.views - Recieved the response
+2022-05-21 22:25:10,642 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/manage.py changed, reloading.
+2022-05-21 22:26:11,145 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-05-22 19:01:05,724 (WARNING) - django.request - Unauthorized: /store/collections/
+2022-05-22 19:01:05,760 (WARNING) - django.request - Forbidden: /store/collections/
+2022-05-22 19:01:05,783 (WARNING) - django.request - Bad Request: /store/collections/
+2022-05-22 19:01:05,969 (WARNING) - django.request - Not Found: /store/collections/-1/
+2022-05-22 19:01:05,997 (WARNING) - django.request - Unauthorized: /store/products/
+2022-05-22 19:01:06,032 (WARNING) - django.request - Forbidden: /store/products/
+2022-05-22 19:01:06,065 (WARNING) - django.request - Bad Request: /store/products/
+2022-05-22 19:02:58,405 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/storefront/settings/common.py changed, reloading.
+2022-05-22 19:03:00,238 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-05-22 19:03:08,164 (WARNING) - django.request - Unauthorized: /store/collections/
+2022-05-22 19:03:08,214 (WARNING) - django.request - Forbidden: /store/collections/
+2022-05-22 19:03:08,272 (WARNING) - django.request - Bad Request: /store/collections/
+2022-05-22 19:03:08,497 (WARNING) - django.request - Not Found: /store/collections/-1/
+2022-05-22 19:03:08,571 (WARNING) - django.request - Unauthorized: /store/products/
+2022-05-22 19:03:08,637 (WARNING) - django.request - Forbidden: /store/products/
+2022-05-22 19:03:08,718 (WARNING) - django.request - Bad Request: /store/products/
+2022-05-22 19:03:21,355 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-05-22 19:03:31,043 (WARNING) - django.request - Unauthorized: /store/collections/
+2022-05-22 19:03:31,094 (WARNING) - django.request - Forbidden: /store/collections/
+2022-05-22 19:03:31,145 (WARNING) - django.request - Bad Request: /store/collections/
+2022-05-22 19:03:31,326 (WARNING) - django.request - Not Found: /store/collections/-1/
+2022-05-22 19:03:31,396 (WARNING) - django.request - Unauthorized: /store/products/
+2022-05-22 19:03:31,456 (WARNING) - django.request - Forbidden: /store/products/
+2022-05-22 19:03:31,508 (WARNING) - django.request - Bad Request: /store/products/
+2022-05-22 19:07:31,127 (WARNING) - django.request - Method Not Allowed: /store/carts/
