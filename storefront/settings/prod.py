@@ -1,4 +1,5 @@
 import os
+from .common import *
 import dj_database_url
 
 # SECURITY WARNING: keep the secret key used in production secret!
