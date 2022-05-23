@@ -18,7 +18,6 @@ from ssl import Options
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -78,6 +77,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8001',
     'http://localhost:4200',
     'http://127.0.0.1:8001',
+    'http://127.0.0.1:4200',
 ]
 
 ROOT_URLCONF = 'storefront.urls'
