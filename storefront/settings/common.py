@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'djoser',
     'silk',
     'corsheaders',
-    'playground',
     'debug_toolbar',
     'store',
     'tags',
@@ -107,7 +106,6 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -131,7 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT=  os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -158,13 +156,6 @@ ADMINS = [
     ('Admin', 'admin@domain.com')
 ]
 
-CELERY_BEAT_SCHEDULE = {
-    'notify_customers': {
-        'task': 'playground.tasks.notify_customers',
-        'schedule': 5,
-        'args': ['Hello World'],
-    }
-}
 
 LOGGING = {
     'version': 1,
