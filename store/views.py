@@ -21,12 +21,12 @@ class CustomerViewSet(ModelViewSet):
     permission_classes = [IsAdminUser]
 
     @action(detail=True, permission_classes=[ViewCustomerHistoryPermission])
-    def history(self,request, pk):
+    def history(self, request, pk):
         return Response('ok')
 
-    @action(detail=False, methods=['GET','PUT'], permission_classes=[IsAuthenticated])
+    @action(detail=False, methods=['GET', 'PUT'], permission_classes=[IsAuthenticated])
     def me(self, request):
-        if request.method == 'GET':            
+        if request.method == 'GET':
             customer = Customer.objects.get(user_id=request.user.id)
             serializer = CustomerSerializer(customer)
             return Response(serializer.data)
@@ -37,14 +37,13 @@ class CustomerViewSet(ModelViewSet):
             return Response(serializer.data)
 
 
-
 class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = ProductFilter
     queryset = Product.objects.prefetch_related('images').all()
     search_fields = ['title', 'description']
-    ordering_fields = ['unit_price', 'last_update']
+    ordering_fields = ['title', 'unit_price', 'last_update']
     pagination_class = DefaultPagination
     permission_classes = [IsAdminOrReadOnly]
 
@@ -115,7 +114,8 @@ class OrderViewSet(ModelViewSet):
         return [IsAuthenticated()]
 
     def create(self, request, *args, **kwargs):
-        serializer = CreateOrderSerializer(data=request.data, context={'user_id': self.request.user.id})
+        serializer = CreateOrderSerializer(data=request.data, context={
+                                           'user_id': self.request.user.id})
         serializer.is_valid(raise_exception=True)
         order = serializer.save()
         serializer = OrderSerializer(order)
@@ -126,14 +126,14 @@ class OrderViewSet(ModelViewSet):
             return CreateOrderSerializer
         elif self.request.method == 'PATCH':
             return UpdateOrderSerializer
-        return OrderSerializer        
+        return OrderSerializer
 
     def get_queryset(self):
         user = self.request.user
 
         if user.is_staff:
             return Order.objects.prefetch_related('items__product').all()
-        
+
         customer_id = Customer.objects.only('id').get(user_id=user.id)
         return Order.objects.filter(customer_id=customer_id)
 
