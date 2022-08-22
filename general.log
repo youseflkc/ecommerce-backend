@@ -42,3 +42,12 @@ Recieved the response
 2022-05-22 19:03:31,456 (WARNING) - django.request - Forbidden: /store/products/
 2022-05-22 19:03:31,508 (WARNING) - django.request - Bad Request: /store/products/
 2022-05-22 19:07:31,127 (WARNING) - django.request - Method Not Allowed: /store/carts/
+2022-08-22 18:53:21,418 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-22 18:53:27,502 (WARNING) - django.request - Not Found: /favicon.ico
+2022-08-22 18:53:43,127 (WARNING) - silk.model_factory - Response to request with pk 4f149107-1108-408b-8cf1-05a23b05c52f has content type text/javascript but was unable to parse it
+2022-08-22 18:53:52,578 (WARNING) - silk.model_factory - Response to request with pk 8557d8b5-aad0-45a3-bb99-c6818d6b6c24 has content type text/javascript but was unable to parse it
+2022-08-22 18:54:00,116 (WARNING) - silk.model_factory - Response to request with pk f8c8d4fe-535c-4104-b093-644459ef0b3a has content type text/javascript but was unable to parse it
+2022-08-22 18:54:11,471 (WARNING) - silk.model_factory - Response to request with pk 292b7825-c702-4305-bd60-83a368023760 has content type text/javascript but was unable to parse it
+2022-08-22 18:54:39,286 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-22 18:54:43,217 (WARNING) - django.request - Unauthorized: /store/orders/
+2022-08-22 18:54:46,880 (WARNING) - django.request - Unauthorized: /store/orders/24/
