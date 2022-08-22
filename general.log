@@ -51,3 +51,156 @@ Recieved the response
 2022-08-22 18:54:39,286 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2022-08-22 18:54:43,217 (WARNING) - django.request - Unauthorized: /store/orders/
 2022-08-22 18:54:46,880 (WARNING) - django.request - Unauthorized: /store/orders/24/
+2022-08-22 19:24:05,921 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-22 19:24:23,094 (WARNING) - django.request - Not Found: /store/media
+2022-08-22 19:24:35,212 (WARNING) - silk.model_factory - Response to request with pk 99be48aa-f90e-469c-be3f-d5a5c44afcc2 has content type text/javascript but was unable to parse it
+2022-08-22 19:24:40,050 (WARNING) - silk.model_factory - Response to request with pk 5174052a-27c9-43d6-ac79-6c1880e8e842 has content type text/javascript but was unable to parse it
+2022-08-22 19:24:43,064 (WARNING) - silk.model_factory - Response to request with pk 815f662e-6e13-4e8a-b222-87e5e0952ffa has content type text/javascript but was unable to parse it
+2022-08-22 19:24:59,782 (WARNING) - django.request - Not Found: /media/store/images
+2022-08-22 19:25:02,342 (WARNING) - django.request - Not Found: /media/store/images/
+2022-08-22 19:25:21,185 (WARNING) - silk.model_factory - Response to request with pk a6246d74-c3cb-4397-9642-170b58c32875 has content type text/javascript but was unable to parse it
+2022-08-22 19:25:21,464 (WARNING) - django.request - Not Found: /media/headphones-red.webp
+2022-08-22 19:25:33,661 (WARNING) - silk.model_factory - Response to request with pk 1cca5773-811c-48c5-9714-c72e78a7d8a7 has content type text/javascript but was unable to parse it
+2022-08-22 19:25:38,297 (WARNING) - silk.model_factory - Response to request with pk 5642cf3e-87e7-4ca3-b320-de40615ff96e has content type text/javascript but was unable to parse it
+2022-08-22 19:25:54,610 (ERROR) - django.request - Internal Server Error: /admin/store/product/648/change/
+Traceback (most recent call last):
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1888, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1798, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1248, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1236, in save_formset
+    formset.save()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 786, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 945, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 1141, in save_new
+    return super().save_new(form, commit=commit)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 762, in save_new
+    return form.save(commit=commit)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 548, in save
+    self.instance.save()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1548, in <listcomp>
+    [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1497, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/fields/files.py", line 316, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/fields/files.py", line 92, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/files/storage.py", line 57, in save
+    name = self._save(name, content)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/files/storage.py", line 315, in _save
+    fd = os.open(full_path, self.OS_OPEN_FLAGS, 0o666)
+PermissionError: [Errno 13] Permission denied: '/home/yousef/Documents/Django Workspace/storefront/media/store/images/headphones-red.webp'
+2022-08-22 19:26:13,777 (WARNING) - silk.model_factory - Response to request with pk 06af1455-0f40-42c7-9e02-e00b4557535a has content type text/javascript but was unable to parse it
+2022-08-22 19:26:17,371 (WARNING) - silk.model_factory - Response to request with pk bd27a0f2-2a93-49a2-9438-5b306c7c286a has content type text/javascript but was unable to parse it
+2022-08-22 19:26:24,807 (ERROR) - django.request - Internal Server Error: /admin/store/product/288/change/
+Traceback (most recent call last):
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1888, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1798, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1248, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1236, in save_formset
+    formset.save()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 786, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 945, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 1141, in save_new
+    return super().save_new(form, commit=commit)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 762, in save_new
+    return form.save(commit=commit)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/forms/models.py", line 548, in save
+    self.instance.save()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1548, in <listcomp>
+    [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1497, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/fields/files.py", line 316, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/fields/files.py", line 92, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/files/storage.py", line 57, in save
+    name = self._save(name, content)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/files/storage.py", line 315, in _save
+    fd = os.open(full_path, self.OS_OPEN_FLAGS, 0o666)
+PermissionError: [Errno 13] Permission denied: '/home/yousef/Documents/Django Workspace/storefront/media/store/images/headphones-blue.webp'
+2022-08-22 19:31:55,005 (WARNING) - silk.model_factory - Response to request with pk 3e536e94-9b71-41b3-a2cd-852ea36f25d6 has content type text/javascript but was unable to parse it
+2022-08-22 19:31:59,871 (WARNING) - silk.model_factory - Response to request with pk a1b4c6bd-4205-4b8d-ae3b-1d0ba722321f has content type text/javascript but was unable to parse it
