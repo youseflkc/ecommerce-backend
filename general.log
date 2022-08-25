@@ -204,3 +204,5 @@ Traceback (most recent call last):
 PermissionError: [Errno 13] Permission denied: '/home/yousef/Documents/Django Workspace/storefront/media/store/images/headphones-blue.webp'
 2022-08-22 19:31:55,005 (WARNING) - silk.model_factory - Response to request with pk 3e536e94-9b71-41b3-a2cd-852ea36f25d6 has content type text/javascript but was unable to parse it
 2022-08-22 19:31:59,871 (WARNING) - silk.model_factory - Response to request with pk a1b4c6bd-4205-4b8d-ae3b-1d0ba722321f has content type text/javascript but was unable to parse it
+2022-08-25 00:12:26,107 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 00:12:31,535 (WARNING) - django.request - Not Found: /favicon.ico
