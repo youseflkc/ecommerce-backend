@@ -206,3 +206,213 @@ PermissionError: [Errno 13] Permission denied: '/home/yousef/Documents/Django Wo
 2022-08-22 19:31:59,871 (WARNING) - silk.model_factory - Response to request with pk a1b4c6bd-4205-4b8d-ae3b-1d0ba722321f has content type text/javascript but was unable to parse it
 2022-08-25 00:12:26,107 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2022-08-25 00:12:31,535 (WARNING) - django.request - Not Found: /favicon.ico
+2022-08-25 20:12:48,394 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:12:55,735 (WARNING) - django.request - Not Found: /favicon.ico
+2022-08-25 20:13:02,936 (ERROR) - django.request - Internal Server Error: /store/collections/
+Traceback (most recent call last):
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 320, in __iter__
+    self._fetch_all()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/silk/sql.py", line 65, in execute_sql
+    q, params = self.as_sql()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 573, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 64, in pre_sql_setup
+    self.setup_query()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 55, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 268, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1051, in get_related_selections
+    next_klass_infos = self.get_related_selections(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1158, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'product'. Choices are: collection
+2022-08-25 20:13:58,035 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:13:59,346 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:14:03,259 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:14:04,557 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:14:07,555 (ERROR) - django.request - Internal Server Error: /store/collections/
+Traceback (most recent call last):
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 320, in __iter__
+    self._fetch_all()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/silk/sql.py", line 65, in execute_sql
+    q, params = self.as_sql()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 573, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 64, in pre_sql_setup
+    self.setup_query()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 55, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 268, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1051, in get_related_selections
+    next_klass_infos = self.get_related_selections(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1158, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'product'. Choices are: collection
+2022-08-25 20:14:58,357 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:14:59,327 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:15:01,057 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:15:02,048 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:15:04,663 (ERROR) - django.request - Internal Server Error: /store/collections/
+Traceback (most recent call last):
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 320, in __iter__
+    self._fetch_all()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/silk/sql.py", line 65, in execute_sql
+    q, params = self.as_sql()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 573, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 64, in pre_sql_setup
+    self.setup_query()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 55, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 268, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1158, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'product'. Choices are: featured_product
+2022-08-25 20:15:13,522 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:15:14,601 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:17:53,867 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:17:54,945 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:18:00,847 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:18:01,823 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:18:08,246 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:18:09,197 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:18:12,487 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:18:13,476 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:18:16,774 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:18:17,631 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:18:30,066 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:18:31,184 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:18:47,788 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:18:48,787 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:19:10,853 (ERROR) - django.request - Internal Server Error: /store/collections/
+Traceback (most recent call last):
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/yousef/.local/share/virtualenvs/storefront-hk1WUvhs/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'feature_product' was declared on serializer CollectionSerializer, but has not been included in the 'fields' option.
+2022-08-25 20:19:43,691 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:19:44,594 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:22:37,305 (WARNING) - django.request - Not Found: /store/prodocts
+2022-08-25 20:22:41,796 (WARNING) - django.request - Not Found: /store/producst

@@ -149,6 +149,7 @@ class CollectionSerializer(serializers.ModelSerializer):
         model = Collection
         fields = ['id', 'title', 'products_count', 'featured_product']
 
+    featured_product = SimpleProductSerializer()
     products_count = SerializerMethodField(method_name='get_products_count')
 
     def get_products_count(self, collection: Collection):
