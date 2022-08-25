@@ -144,18 +144,6 @@ class ReviewSerializer(serializers.ModelSerializer):
         return Review.objects.create(product_id=product_id, **validated_data)
 
 
-class CollectionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Collection
-        fields = ['id', 'title', 'products_count', 'featured_product']
-
-    featured_product = SimpleProductSerializer()
-    products_count = SerializerMethodField(method_name='get_products_count')
-
-    def get_products_count(self, collection: Collection):
-        return collection.product_set.count()
-
-
 class ProductImageSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         product_id = self.context['product_id']
@@ -179,6 +167,17 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def calculate_tax(self, product: Product):
         return product.unit_price * Decimal(1.13)
+
+
+class CollectionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Collection
+        fields = ['id', 'title', 'products_count', 'featured_product']
+
+    products_count = SerializerMethodField(method_name='get_products_count')
+
+    def get_products_count(self, collection: Collection):
+        return collection.product_set.count()
 
 
 class CustomerSerializer(serializers.ModelSerializer):

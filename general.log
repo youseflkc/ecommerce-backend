@@ -416,3 +416,10 @@ AssertionError: The field 'feature_product' was declared on serializer Collectio
 2022-08-25 20:19:44,594 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2022-08-25 20:22:37,305 (WARNING) - django.request - Not Found: /store/prodocts
 2022-08-25 20:22:41,796 (WARNING) - django.request - Not Found: /store/producst
+2022-08-25 20:39:42,731 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:40:25,380 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-08-25 20:40:26,438 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:40:35,226 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:40:36,134 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-08-25 20:40:37,829 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
+2022-08-25 20:40:39,445 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
