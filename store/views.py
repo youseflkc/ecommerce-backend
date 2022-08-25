@@ -59,7 +59,7 @@ class ProductViewSet(ModelViewSet):
 
 
 class CollectionViewSet(ModelViewSet):
-    queryset = Collection.objects.all().select_related('product')
+    queryset = Collection.objects.all().select_related('featured_product')
     serializer_class = CollectionSerializer
     permission_classes = [IsAdminOrReadOnly]
 
