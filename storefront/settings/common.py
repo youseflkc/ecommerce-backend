@@ -79,6 +79,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8001',
     'http://127.0.0.1:4200',
     'http://127.0.0.1:9876',
+    'http://www.dropbox.com'
 ]
 
 ROOT_URLCONF = 'storefront.urls'
