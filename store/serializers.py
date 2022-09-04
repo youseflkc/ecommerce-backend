@@ -13,7 +13,7 @@ from store.models import Cart, CartItem, Collection, Customer, Order, OrderItem,
 class SimpleProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'title', 'unit_price']
+        fields = ['id', 'title', 'unit_price', 'images']
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
