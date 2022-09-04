@@ -119,7 +119,7 @@ class AddCartItemSerializer(serializers.ModelSerializer):
 
         try:
             cart_item = CartItem.objects.get(
-                cart_id=cart_id, product_id=product_id, quantity=quantity)
+                cart_id=cart_id, product_id=product_id)
             cart_item.quantity += quantity
             cart_item.save()
             self.instance = cart_item
