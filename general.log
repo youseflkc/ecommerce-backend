@@ -423,3 +423,39 @@ AssertionError: The field 'feature_product' was declared on serializer Collectio
 2022-08-25 20:40:36,134 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2022-08-25 20:40:37,829 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/views.py changed, reloading.
 2022-08-25 20:40:39,445 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-06 23:03:32,559 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-06 23:03:36,851 (WARNING) - django.request - Not Found: /favicon.ico
+2022-09-06 23:03:44,375 (WARNING) - django.request - Method Not Allowed: /store/carts/
+2022-09-06 23:03:51,526 (ERROR) - django.request - Internal Server Error: /store/carts/
+Traceback (most recent call last):
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1886, in to_representation
+    return method(value)
+  File "/home/yousef/Documents/Django Workspace/storefront/store/serializers.py", line 115, in get_total_quantity
+    return sum([item.quantity for item in cart.itens.all()])
+AttributeError: 'Cart' object has no attribute 'itens'
+2022-09-06 23:04:22,396 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-06 23:04:23,248 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
