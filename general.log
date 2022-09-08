@@ -459,3 +459,98 @@ Traceback (most recent call last):
 AttributeError: 'Cart' object has no attribute 'itens'
 2022-09-06 23:04:22,396 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
 2022-09-06 23:04:23,248 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:32:42,411 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:32:47,297 (WARNING) - django.request - Not Found: /favicon.ico
+2022-09-08 03:32:55,048 (WARNING) - django.request - Method Not Allowed: /store/carts/
+2022-09-08 03:32:59,804 (ERROR) - django.request - Internal Server Error: /store/carts/
+Traceback (most recent call last):
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 20, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1886, in to_representation
+    return method(value)
+TypeError: CartSerializer.get_total_price_with_tax() takes 1 positional argument but 2 were given
+2022-09-08 03:33:21,777 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:33:22,752 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:33:25,646 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:33:26,425 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:33:40,483 (WARNING) - django.request - Not Found: /store/carts/items/
+2022-09-08 03:34:01,791 (WARNING) - django.request - Bad Request: /store/carts/cd146eeb-c8b3-4446-8015-02605af070b9/items/
+2022-09-08 03:34:18,983 (ERROR) - django.request - Internal Server Error: /store/carts/cd146eeb-c8b3-4446-8015-02605af070b9/
+Traceback (most recent call last):
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/yousef/Documents/Django Workspace/storefront/.venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1886, in to_representation
+    return method(value)
+  File "/home/yousef/Documents/Django Workspace/storefront/store/serializers.py", line 116, in get_total_price_with_tax
+    return self.get_total_price(cart) * 1.13
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+2022-09-08 03:35:08,493 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:35:09,695 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:35:59,631 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:36:00,922 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:36:02,275 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:36:03,284 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:36:16,265 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:36:17,703 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:36:19,098 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:36:20,100 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:36:34,677 (WARNING) - django.request - Method Not Allowed: /store/carts/
+2022-09-08 03:37:16,499 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:17,703 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:37:22,144 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:22,918 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:37:26,497 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:27,220 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:37:30,984 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:31,702 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:37:35,341 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:36,467 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:37:48,289 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:49,423 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:37:51,894 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
+2022-09-08 03:37:53,167 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-08 03:38:10,358 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
