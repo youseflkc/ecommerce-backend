@@ -38,10 +38,23 @@ class OrderItemSerializer(serializers.ModelSerializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     items = OrderItemSerializer(many=True)
+    total_price = serializers.SerializerMethodField()
+    total_price_with_tax = serializers.SerializerMethodField()
+    total_quantity = serializers.SerializerMethodField()
+
+    def get_total_price(self, order):
+        return sum([item.quantity * item.product.unit_price for item in order.items.all()])
+
+    def get_total_price_with_tax(self, order):
+        return round(self.get_total_price(order) * Decimal(1.13), 2)
+
+    def get_total_quantity(self, order):
+        return sum([item.quantity for item in order.items.all()])
 
     class Meta:
         model = Order
-        fields = ['id', 'customer', 'placed_at', 'payment_status', 'items']
+        fields = ['id', 'customer', 'placed_at', 'payment_status',
+                  'items', 'total_price', 'total_price_with_tax', 'total_quantity']
 
 
 class CreateOrderSerializer(serializers.Serializer):

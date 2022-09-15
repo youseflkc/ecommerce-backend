@@ -554,3 +554,17 @@ TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
 2022-09-08 03:37:51,894 (INFO) - django.utils.autoreload - /home/yousef/Documents/Django Workspace/storefront/store/serializers.py changed, reloading.
 2022-09-08 03:37:53,167 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2022-09-08 03:38:10,358 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-15 03:10:07,960 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-09-15 03:10:11,486 (WARNING) - django.request - Not Found: /favicon.ico
+2022-09-15 03:10:18,940 (WARNING) - django.request - Unauthorized: /store/orders/
+2022-09-15 03:10:41,631 (WARNING) - django.request - Not Found: /auth/jwt/ceate
+2022-09-15 03:10:44,455 (WARNING) - django.request - Not Found: /auth/jwt/
+2022-09-15 03:10:49,669 (WARNING) - django.request - Unauthorized: /auth/users/
+2022-09-15 03:11:04,769 (WARNING) - django.request - Unauthorized: /auth/users/create/
+2022-09-15 03:11:09,501 (WARNING) - django.request - Unauthorized: /auth/users/token/
+2022-09-15 03:11:12,713 (WARNING) - django.request - Not Found: /auth/users/token/create
+2022-09-15 03:11:18,832 (WARNING) - django.request - Unauthorized: /auth/users/
+2022-09-15 03:11:24,752 (WARNING) - django.request - Unauthorized: /auth/users/me/
+2022-09-15 03:12:06,541 (WARNING) - django.request - Not Found: /auth/jwt
+2022-09-15 03:12:09,839 (WARNING) - django.request - Method Not Allowed: /auth/jwt/refresh
+2022-09-15 03:12:15,602 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
